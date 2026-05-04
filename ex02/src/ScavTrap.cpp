@@ -81,6 +81,22 @@ void ScavTrap::beRepaired(unsigned int amount)
 	}
 }
 
+void ScavTrap::attack(const std::string &target)
+{
+	if (this->_energyPoints == 0)
+	{
+		std::cout << this->_name << " is out of energy !" << std::endl;
+		return;
+	}
+	if (target == this->_name)
+	{
+		std::cout << this->_name << " can't attack himself !" << std::endl;
+		return;
+	}
+	this->_energyPoints--;
+	std::cout << this->_name << " does another kind of attack to" << target << ", causing "<< this->_attackDamage << " points of damage !"<< std::endl;
+}
+
 void ScavTrap::guardGate()
 {
 	if (this->_guardState == 0)
