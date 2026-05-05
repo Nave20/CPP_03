@@ -94,7 +94,7 @@ void ScavTrap::attack(const std::string &target)
 		return;
 	}
 	this->_energyPoints--;
-	std::cout << this->_name << " does another kind of attack to" << target << ", causing "<< this->_attackDamage << " points of damage !"<< std::endl;
+	std::cout << this->_name << " does another kind of attack to " << target << ", causing "<< this->_attackDamage << " points of damage !"<< std::endl;
 }
 
 void ScavTrap::guardGate()
